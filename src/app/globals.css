@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Inter font will be loaded via next/font in layout.tsx */
+
+@layer base {
+  :root {
+    --background: 195 71% 88%; /* #caf0f8 - Pale Blue as target for gradient end */
+    --foreground: 238 93% 19%; /* #03045e - New main text color (dark blue) */
+    
+    --card: 195 71% 88%; /* #caf0f8 - Keeping card similar for now, can be adjusted if needed */
+    --card-foreground: 238 93% 19%; /* #03045e - Dark Blue for text on card */
+    
+    --popover: 195 71% 88%; /* #caf0f8 */
+    --popover-foreground: 238 93% 19%; /* #03045e */
+    
+    --primary: 200 100% 36%; /* #0077b6 - Medium Blue for buttons */
+    --primary-foreground: 195 71% 88%; /* #caf0f8 - Pale Blue for text on primary buttons */
+    
+    --secondary: 238 93% 19%; /* #03045e - Dark Blue for footer bg, headings */
+    --secondary-foreground: 195 71% 88%; /* #caf0f8 - Pale Blue for text on secondary bg */
+    
+    --muted: 190 75% 75%; /* #90e0ef - Very Light Blue for muted backgrounds */
+    --muted-foreground: 238 93% 19%; /* #03045e - Dark Blue for muted text */
+    
+    --accent: 190 100% 42%; /* #00b4d8 - Light Blue for button hover, accents */
+    --accent-foreground: 238 93% 19%; /* #03045e - Dark Blue for text on accent */
+    
+    --destructive: 0 62.8% 30.6%; /* Default dark destructive */
+    --destructive-foreground: 0 0% 98%; 
+    
+    --border: 200 100% 36%; /* #0077b6 - Medium Blue for borders */
+    --input: 190 75% 75%; /* #90e0ef - Very Light Blue for inputs */
+    --ring: 200 100% 36%; /* #0077b6 - Medium Blue for focus rings */
+
+    --radius: 0.5rem; /* 8px */
+  }
+
+  /* No .dark class, theme is light by default */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-foreground; /* text-foreground is now dark blue */
+    font-family: var(--font-inter), system-ui, sans-serif;
+    background-color: hsl(195, 71%, 88%); /* Fallback to #caf0f8 */
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%) 0%, hsl(195, 71%, 88%) 100%); /* Gradient from white to #caf0f8 */
+  }
+  h1, h2, h3, h4, h5, h6 {
+    /* Default heading color, can be overridden by !text-secondary for specific headings */
+    @apply text-secondary; 
+  }
+}
+
+@layer utilities {
+  .text-main-body {
+    /* Uses the main foreground color for body text */
+    color: hsl(var(--foreground)); 
+  }
+}
+
+/* Minimal scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background) / 0.5);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.7);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
