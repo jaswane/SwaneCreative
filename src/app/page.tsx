@@ -203,7 +203,7 @@ export default function Home() {
               />
             </div>
             <p className="text-sm text-secondary/80">
-              Denne nettsiden ble laget på én time ved hjelp av en AI-agent i ChatGPT og Typingmind, kombinert med rask utvikling i Firebase, versjonskontroll via GitHub, og publisering/hosting på Vercel.
+              Denne nettsiden er bygget med Next.js og Tailwind CSS, utviklet med hjelp av Cursor og ChatGPT, versjonskontrollert i GitHub og deployet på Vercel.
             </p>
         </section>
 
