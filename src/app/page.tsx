@@ -68,12 +68,6 @@ const otherProjects = [
     description: 'Follow my visual journey and creative updates on Instagram.',
     url: 'https://instagram.com/andreas_swane/',
     icon: InstagramIcon,
-  },
-  {
-    name: 'Bilder av meg',
-    description: 'En samling bilder hvor jeg er med, på Flickriver.',
-    url: 'https://www.flickriver.com/people/norue/photosof/',
-    icon: Smile,
   }
 ];
 
