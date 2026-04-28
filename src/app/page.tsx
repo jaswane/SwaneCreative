@@ -194,7 +194,7 @@ export default function Home() {
             </p>
             <div className="flex justify-center mb-6">
               <Image
-                src="/bilder/grunnlegger-andreas-1-1-1024x767.jpg"
+                src="/bilder/14053556326_619db546bf_h.jpg"
                 alt="Andreas Swane - Swane Creative"
                 width={1024}
                 height={767}
